@@ -1,29 +1,30 @@
 openapi: 3.0.1
 info:
-  title: TODO Plugin
-  description: A plugin that allows the user to create and manage a TODO list using ChatGPT.
+  title: Scrapbox-project Plugin
+  description: A plugin that allows the user to view project-informations using ChatGPT.
   version: 'v1'
 servers:
   - url: http://localhost:3333
 paths:
-  /todos:
+  /{title}:
     get:
-      operationId: getTodos
-      summary: Get the list of todos
+      operationId: getInformation
+      summary: Get the project information of {title}
       responses:
         "200":
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/getTodosResponse'
+                $ref: '#/components/schemas/getInformationResponse'
 components:
   schemas:
-    getTodosResponse:
+    getInformationResponse:
       type: object
       properties:
-        todos:
-          type: array
-          items:
-            type: string
-          description: The list of todos.
+        isNotFound:
+          type: boolean
+          description: The information is Not Found.
+        information:
+          type: string
+          description: The information.
