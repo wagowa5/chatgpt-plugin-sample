@@ -1,0 +1,16 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "Scrapboxプロジェクトの情報を参照する",
+    "name_for_model": "reference Scrapbox-project",
+    "description_for_human": "Scrapboxプロジェクトを参照する。",
+    "description_for_model": "Plugin for reference specific project-information.",
+    "auth": {
+        "type": "none"
+    },
+    "api": {
+        "type": "openapi",
+        "url": "http://localhost:3333/openapi.yaml"
+    },
+    "logo_url": "http://localhost:3333/logo.png",
+    "contact_email": "support@example.com"
+}
