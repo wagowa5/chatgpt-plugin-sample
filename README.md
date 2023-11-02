@@ -1,0 +1,2 @@
+# chatgpt-plugin-sample
+ChatGPTのプラグインサンプル
